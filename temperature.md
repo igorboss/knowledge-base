@@ -6,4 +6,4 @@ Temperature
 
 # Result
 - Type: Number
-- Range: |25<=X<44|
+- Range: |26<=X<44|
