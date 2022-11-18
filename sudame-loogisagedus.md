@@ -8,6 +8,10 @@
 - Tüüp: täisarv
 - Vahemik: |0<=X<100|
 
+```json
+{"code": 1111}
+``` 
+
 ## Minu mudel
 ```fsh
 Logical: MyObservationModel
