@@ -6,7 +6,7 @@
 
 # Result
 - Type: Integer
-- Range: |0<=X<100|
+- Range: |0<=X<99|
 
 {{def:long-hierarchy-model}}
 
