@@ -1,7 +1,7 @@
 TermX is a unique open-source knowledge development platform that include:
 - [:open_book: Terminology server](page:terminology)
 - [:pencil: Wiki](page:wiki)
-- [:building_construction: Data modeller](page:modeller)
+- [:building_construction: Modeller](page:modeler)
 - [:crayon: Authoring and publication tools](page:authoring)
 {.links-list}
 

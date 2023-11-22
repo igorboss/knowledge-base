@@ -57,6 +57,7 @@ services:
       - BOB_MINIO_SECRET_KEY=bobobobo
       - SNOWSTORM_URL=https://snowstorm-public.kodality.dev/
       - SNOWSTORM_BRANCH=MAIN/SNOMEDCT-EE
+      - SNOWSTORM_NAMESPACE=YOUR_SNOMEDCT_NAMESPACE_IDENTIFIER
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://termx-server:8200/health" ]
       interval: 1s

@@ -149,6 +149,7 @@ SNOWSTORM_URL=https://snowstorm.kodality.dev/ #base url of Snowstorm server
 SNOWSTORM_USER=termserver-app #basic-auth username
 SNOWSTORM_PASSWORD=xxxx #basic-auth password
 SNOWSTORM_BRANCH=MAIN/SNOMEDCT-EE
+SNOWSTORM_NAMESPACE=1000181 #for Estonian NRC
 
 GITHUB_CLIENT_ID=xxxx
 GITHUB_CLIENT_SECRET=xxxx
@@ -175,7 +176,8 @@ TERMX_WEB_URL=http://localhost:4200
 #### SNOMED
 - SNOWSTORM_URL. The root URL of the Snowstorm server. 
 - SNOWSTORM_BRANCH. The SNOMED edition on the Snowstorm server is used by default. For example: `SNOWSTORM_BRANCH=MAIN/SNOMEDCT-EE` for Estonian Edition, `SNOWSTORM_BRANCH=MAIN` for International Edition.
-- SNOWSTORM_USER and SNOWSTORM_PASSWORD if your Snowstorm server uses basic authentication.
+- SNOWSTORM_USER and SNOWSTORM_PASSWORD. In the case your Snowstorm server uses basic authentication.
+- SNOWSTORM_NAMESPACE. The SNOMED CT Namespace Identifier was used to generate the concept and description identifier. Find your namespace from the list: https://cis.ihtsdotools.org/info/index.html?home=namespaces. 
       
 #### Github
 - GITHUB_APP_NAME. The GitHub App. Read more information on [GitHub application page](page:github-application). 
@@ -299,7 +301,7 @@ then the application is ready to receive requests from the browser.
 
 ## Serving the application
 
-+++NGINX reverse proxy config example
++++NGINX reverse proxy config example (for example, /etc/nginx/conf.d/default.conf_) 
 
 ```plaintext
 server {
@@ -321,10 +323,6 @@ server {
    
     location /chef/ {
         client_max_body_size 100M;
-        add_header 'Access-Control-Allow-Origin' "*" always;
-        add_header 'Access-Control-Allow-Credentials' 'true' always;
-        add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS' always;
-        add_header 'Access-Control-Allow-Headers' 'Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With' always;
         proxy_pass http://localhost:8500/;
     }
     

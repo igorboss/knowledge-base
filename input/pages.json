@@ -376,8 +376,16 @@
     "children" : [ {
       "code" : "d397f72c-c8f1-4fe8-8ebf-9516332543ea",
       "contents" : [ {
-        "name" : "Github application",
-        "slug" : "github-application",
+        "name" : "Github App",
+        "slug" : "github-app",
+        "lang" : "en",
+        "ct" : "markdown"
+      } ]
+    }, {
+      "code" : "644744bf-5abe-4306-a037-b60956dfa3cc",
+      "contents" : [ {
+        "name" : "Static Site Generation",
+        "slug" : "static-site-generation",
         "lang" : "en",
         "ct" : "markdown"
       } ]
@@ -387,14 +395,6 @@
     "contents" : [ {
       "name" : "Implementation Guide",
       "slug" : "implementation-guide",
-      "lang" : "en",
-      "ct" : "markdown"
-    } ]
-  }, {
-    "code" : "644744bf-5abe-4306-a037-b60956dfa3cc",
-    "contents" : [ {
-      "name" : "Static Site Generation",
-      "slug" : "static-site-generation",
       "lang" : "en",
       "ct" : "markdown"
     } ]

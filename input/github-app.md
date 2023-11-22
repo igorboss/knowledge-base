@@ -1,5 +1,6 @@
 TermX use Github App for synchronization of the content with Github repositories.
-Use separate Github App for every installation.
+
+> Use separate Github App for every installation. {.is-info}
 
 
 ## Creating GitHub App

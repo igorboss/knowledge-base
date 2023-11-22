@@ -41,7 +41,7 @@ The project conceptual design was inspired by the HL7 CTS2 standard and the spec
   - Java 17+
   - Micronaut 3+
 - Web application
-  - Angular 13+
+  - Angular 16+
   - Any web server (Ngnix or Apache) for SSL offload and reverse proxy
 - Database
   - PostgreSQL 14+
