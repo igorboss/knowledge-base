@@ -16,6 +16,7 @@ Every concept provides information about
 ### Translations
 
 TermX also provides translation widget. You can add new translations of concept. Each translation is connected with the installed language module and the working/daily branch.
+The list of supported languages should configured through [snomed-module code system](cs:snomed-module).
 
 ![Translation status](files/88/snomed-proposed-translation.png){width=500}
 

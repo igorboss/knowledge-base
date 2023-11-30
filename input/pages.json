@@ -258,14 +258,6 @@
       "ct" : "markdown"
     } ]
   }, {
-    "code" : "8935c65c-9c3c-4e69-9e35-54ca225e0fc4",
-    "contents" : [ {
-      "name" : "Thesaurus",
-      "slug" : "thesaurus",
-      "lang" : "en",
-      "ct" : "markdown"
-    } ]
-  }, {
     "code" : "dbb3fa5a-afbf-44e7-9d73-0d3f3e444c09",
     "contents" : [ {
       "name" : "Comments",
@@ -278,6 +270,14 @@
     "contents" : [ {
       "name" : "History",
       "slug" : "history",
+      "lang" : "en",
+      "ct" : "markdown"
+    } ]
+  }, {
+    "code" : "8935c65c-9c3c-4e69-9e35-54ca225e0fc4",
+    "contents" : [ {
+      "name" : "Thesaurus",
+      "slug" : "thesaurus",
       "lang" : "en",
       "ct" : "markdown"
     } ]
@@ -547,12 +547,37 @@
       } ]
     } ]
   }, {
-    "code" : "996d3e19-d231-4dc2-8059-fddc0cba13c7",
+    "code" : "7d3724c6-02dc-45e3-b2a4-39307458f138",
     "contents" : [ {
       "name" : "Assets",
       "slug" : "assets",
       "lang" : "en",
       "ct" : "markdown"
+    } ],
+    "children" : [ {
+      "code" : "996d3e19-d231-4dc2-8059-fddc0cba13c7",
+      "contents" : [ {
+        "name" : "Icons",
+        "slug" : "icons",
+        "lang" : "en",
+        "ct" : "markdown"
+      } ]
+    }, {
+      "code" : "0cabc5f1-7367-47d7-a03c-2e9bb853a7bb",
+      "contents" : [ {
+        "name" : "StructureDefinition viewer",
+        "slug" : "structuredefinition-viewer",
+        "lang" : "en",
+        "ct" : "markdown"
+      } ]
+    }, {
+      "code" : "e52660d4-d2c7-42a5-b739-b199adc3d55a",
+      "contents" : [ {
+        "name" : "FML Editor library",
+        "slug" : "fml-editor-library",
+        "lang" : "en",
+        "ct" : "markdown"
+      } ]
     } ]
   } ]
 } ]

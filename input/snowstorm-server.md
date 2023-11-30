@@ -14,7 +14,7 @@ The minimal deployment required to support operations with SNOMED in the TermX i
 The additional SNOMED browser (like [official browser](https://browser.ihtsdotools.org)) may be installed in your environment to have an additional view of SNOMED concepts (blue box  on the deployment diagram). 
 > See "snomed-browser" component in the docker-compose.yml. We recommend using the image of the SNOMED browser from `docker.kodality.com/snomedct-browser:latest`.
 The web server also should be configured to provide access to the Snowstorm API and SNOMED Browser. 
-> Ensure that `/snowstorm/`, `/snomed-ct/` and `location /snowstorm/snomed-ct/` are configured.
+> Ensure that `/snowstorm/`, `/snomed-ct/` and `/snowstorm/snomed-ct/` locations are configured in the web server.
 
 
 ### Public and secure access
