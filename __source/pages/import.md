@@ -162,6 +162,7 @@ The parameters of import are
 | version.number | string | Yes | The version number. |
 | version.status | code | No | Value from the list: draft, active, retired. Default _draft_. |
 | version.releaseDate | date | No | Release date or date expected use since. Default _today()_. |
+| version.oid | string | No | Legacy OID identifier. |
 | type | code | No* | Value from list: _csv_; _tsv_; _json_; _fsh_. (*) Required if file provided. |
 | link | url | No* | (*) File or link should be provided |
 | importClass | string | No | The name of import class. Default _CS-FILE-IMPORT_. |
@@ -297,6 +298,7 @@ The parameters of import are
 | version.number | string | Yes | The version number. |
 | version.status | code | No | Value from the list: draft, active, retired. Default _draft_. |
 | version.releaseDate | date | No | Release date or date expected use since. Default _today()_. |
+| version.oid | string | No | Legacy OID identifier. |
 | type | code | No* | Value from list: _csv_; _tsv_; _json_; _fsh_. (*) Required if file provided. |
 | link | url | No* | (*) File or link should be provided |
 | importClass | string | No | The name of import class. Default _VS-FILE-IMPORT_. |

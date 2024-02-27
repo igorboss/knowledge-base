@@ -1,10 +1,15 @@
-## Dev Quickstart using docker-compose
-WARNING: this guide is intended for local quickstart and not suited for production environments.
+> **WARNING!**
+> This guide is intended for local quickstart and not suited for production environments.{.is-warning}
+
+
+
+# {.tabset}
+## Docker Compose
 
 Create folder (for example `termx`) and move to this folder.
 
-### 1. create postgres init file
-pginit.sql
+### 1. Create postgres init file
+*pginit.sql*
 ```
 CREATE ROLE termserver_admin LOGIN PASSWORD 'test' NOSUPERUSER INHERIT NOCREATEDB CREATEROLE NOREPLICATION;
 CREATE ROLE termserver_app   LOGIN PASSWORD 'test' NOSUPERUSER INHERIT NOCREATEDB CREATEROLE NOREPLICATION;
@@ -19,7 +24,7 @@ select pg_reload_conf();
 ```
 
 ### 2. Create docker compose file
-docker-compose.yml
+*docker-compose.yml*
 ```
 version: '3.9'
 services:
@@ -136,9 +141,8 @@ Read more about the configuration of containers in the [installation guide](page
 
 ### 3. Run it!
 
-
 Install and run binaries
-```
+```s
 docker-compose pull && docker-compose up -d
 ```
 
@@ -154,6 +158,7 @@ Web application should be available on http://localhost:4200
 ### 4. Update it later (if needed)
 
 Move to the folder with `docker-compose.yml` (in our example `termx`).
+
 Get updates and restart updated containers.
 
 ```
@@ -167,11 +172,11 @@ Move to the folder with `docker-compose.yml` (in our example `termx`).
 docker-compose stop
 ```
 
+## Helm
 
+TermX can be installed by [Helm chart](https://gitlab.com/kodality/kodality-helm/-/tree/master/charts/termx). 
 
-
-
-
+*NB: Some components have to be installed separately; thus, there is no chart in the Gitlab project!*
 
 
 

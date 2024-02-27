@@ -398,6 +398,14 @@
       "lang" : "en",
       "ct" : "markdown"
     } ]
+  }, {
+    "code" : "bb027b54-a86b-42a1-a0ae-3ef44117d303",
+    "contents" : [ {
+      "name" : "Release",
+      "slug" : "release",
+      "lang" : "en",
+      "ct" : "markdown"
+    } ]
   } ]
 }, {
   "code" : "44069825-d897-4bb3-897f-03140af25343",
@@ -464,20 +472,29 @@
       "slug" : "architecture",
       "lang" : "en",
       "ct" : "markdown"
+    } ],
+    "children" : [ {
+      "code" : "baafc060-866c-45a8-a7e2-7c6f7c98cb6d",
+      "contents" : [ {
+        "name" : "Kodality Dependencies",
+        "slug" : "kodality-dependencies",
+        "lang" : "en",
+        "ct" : "markdown"
+      } ]
+    }, {
+      "code" : "616fc6b2-24a9-4f67-b813-cd6e6a542e08",
+      "contents" : [ {
+        "name" : "Developer Quickstart",
+        "slug" : "developer-quickstart",
+        "lang" : "en",
+        "ct" : "markdown"
+      } ]
     } ]
   }, {
     "code" : "6811215a-2ea0-4e60-b735-e607f85e8aee",
     "contents" : [ {
       "name" : "Hardware requirements",
       "slug" : "hardware-requirements",
-      "lang" : "en",
-      "ct" : "markdown"
-    } ]
-  }, {
-    "code" : "616fc6b2-24a9-4f67-b813-cd6e6a542e08",
-    "contents" : [ {
-      "name" : "Developer Quickstart",
-      "slug" : "developer-quickstart",
       "lang" : "en",
       "ct" : "markdown"
     } ]

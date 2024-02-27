@@ -202,6 +202,7 @@ TERMX_WEB_URL=http://localhost:4200
 Frontend environment variables.
 
 ```plaintext
+BASE_HREF=/
 OAUTH_ISSUER=https://auth.kodality.dev/realms/terminology
 OAUTH_CLIENT_ID=term-client
 
@@ -209,19 +210,68 @@ UI_LANGUAGES=["en","fr"]
 DEFAULT_LANGUAGE=fr
 CONTENT_LANGUAGES=["en","fr","pl"]
 EXTRA_LANGUAGES={"pl":{"en":"Polish","fr":"Polonais"}}
+
+SNOWSTORM_URL=https://snowstorm-public.kodality.dev/
+SNOWSTORM_DAILY_BUILD_URL=https://snowstorm-public-dailybuild.kodality.dev/
 ```
 
-#### Languages
-- UI_LANGUAGES. Languages supported in the user interface. The list of supported languages listed [here](https://gitlab.com/kodality/terminology/termx-web/-/tree/main/app/src/assets/i18n?ref_type=heads). You should add a translation file if you want to have UI in your language.
-- DEFAULT_LANGUAGE. Default language will be used if your browser locale does not belong to the list of UI languages. 
-- CONTENT_LANGUAGES. List of languages used in the multilingual inputs. If a language is missing from the list of supported languages, specify it as an additional language. 
-- EXTRA_LANGUAGES. Languages may be used in the multilingual inputs and inputs. It should be presented as JSON where language code is key and pairs language+translation for every UI language should be added.
+#### Deployment
+`BASE_HREF`
+- Specify when your application has a relative URL that differs from the domain URL. For example, set it to `/termx` if your application run on `https://site.org/termx`.
+- **Default:** The default value is `/` that match to the domain root, for example `https://site.org`.
 
 #### Security
-- OAUTH_ISSUER. The address (realm) of the OpenId Connect server. The special keyword `dummy` enables the mode without an SSO server. 
-- OAUTH_CLIENT_ID. OAuth2 client identifier in $OAUTH_ISSUER. The special keyword `dummy` may be used for enabling a Guest account with all possible privileges.
+`OAUTH_ISSUER`
+- The address (realm) of the OpenId Connect server. The special keyword `dummy` enables the mode without an SSO server. 
+
+`OAUTH_CLIENT_ID`
+- OAuth2 client identifier in `$OAUTH_ISSUER`. The special keyword `dummy` may be used for enabling a Guest account with all possible privileges.
+
+#### API
+`TERMX_API`
+- The address of server API.
+- **Default:** `/api`.
+
+`SWAGGER_URL`
+- **Default:** `/swagger/`.
+
+`CHEF_URL`
+- **Default:** `/chef/`.
+
+`PLANT_UML_URL`
+- **Default:** `/plantuml`.
+
+`FML_EDITOR`
+- **Default:** `/fml-editor`.
+
+#### Languages
+
+`DEFAULT_LANGUAGE`
+- Default language will be used if your browser locale does not belong to the list of UI languages.
+- **Default:** `/en`.
+
+`UI_LANGUAGES`
+- Languages supported in the user interface. The list of supported languages listed [here](https://gitlab.com/kodality/terminology/termx-web/-/tree/main/app/src/assets/i18n?ref_type=heads). You should add a translation file if you want to have UI in your language.
+- **Default:** `'en', 'et', 'lt', 'de', 'fr', 'nl'`
+
+`CONTENT_LANGUAGES`
+- List of languages used in the multilingual inputs. If a language is missing from the list of supported languages, specify it as an additional language.
+- **Default:** `$UI_LANGUAGES`
+
+`EXTRA_LANGUAGES`
+- Languages may be used in the multilingual inputs and inputs. It should be presented as JSON where language code is key and pairs language+translation for every UI language should be added.
+
+#### Snowstorm
+`SNOWSTORM_URL`
+- The address of [Snowstorm server](page:snowstorm-server)
+
+`SNOWSTORM_DAILY_BUILD_URL`
+- The address of Snowstorm server's daily build.
+
 
 You can validate configured parameters locally in [env.js](http://localhost:4200/assets/env.js).
+*Some fields may be empty; if so, the default value will be used.*
+
 
 ### pg.env
 Postgres-related configuration for initial setup. You a free to change those values.

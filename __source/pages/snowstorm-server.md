@@ -114,12 +114,13 @@ You can also install public SNOMED Browser
     container_name: snomed-browser
     environment:
       - API_HOST=http://snowstorm_pub:8080/
+      - TERMX_URL=https://termx.kodality.dev/
     networks:
       - elastic
     ports:
       - 9000:80
 ```
-
+where API_HOST is the url of the public Snowstorm server and TERMX_URL url of the TermX installation for redirect to the translation component. 
 
 ### Nginx configuration <i class="mdi mdi-web"></i>
 Implements basic authentication for snowstorm service.
